@@ -189,6 +189,43 @@ body {
     background-color: var(--white);
     position: relative;
 }
+/* Featured Sections */
+.featured-section {
+    margin-bottom: 5rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--gray-light) 0%, rgba(255, 205, 0, 0.1) 100%);
+    border-radius: 20px;
+    border-left: 5px solid var(--colombian-yellow);
+}
+
+.section-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    color: var(--colombian-blue);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--gray-medium);
+    font-size: 1.1rem;
+}
+
+/* Ráquira Grid Specific */
+.raquira-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
 
 /* Intro Section */
 .intro-section {
