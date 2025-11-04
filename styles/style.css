@@ -741,3 +741,14 @@ footer {
         font-size: 13px;
     }
 }
+/* Villa de Leyva Grid Specific */
+.villa-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 1400px) {
+    .villa-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+

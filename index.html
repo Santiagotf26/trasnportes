@@ -89,7 +89,7 @@
             </div>
         </section>
 
-        <!-- Villa de Leyva Section -->
+               <!-- Villa de Leyva Section -->
         <section class="featured-section">
             <div class="section-header">
                 <span class="section-icon">🏛️</span>
@@ -97,7 +97,7 @@
                 <p>Patrimonio histórico y bellezas naturales</p>
             </div>
             
-            <div class="destinations-grid">
+            <div class="destinations-grid villa-grid">
                 <!-- La Periquera -->
                 <div class="destination-card" onclick="openModal('periquera')">
                     <div class="card-image" style="background-image: url('images/La_periquera.png');">
@@ -114,6 +114,36 @@
                         <div class="card-overlay">
                             <span class="card-icon">💎</span>
                             <h3>Pozos Azules</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- El Fósil -->
+                <div class="destination-card" onclick="openModal('fosil')">
+                    <div class="card-image" style="background-image: url('images/el_fosil.png');">
+                        <div class="card-overlay">
+                            <span class="card-icon">🦖</span>
+                            <h3>El Fósil</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso del Ángel -->
+                <div class="destination-card" onclick="openModal('paso-angel')">
+                    <div class="card-image" style="background-image: url('images/paso_del_angel.png');">
+                        <div class="card-overlay">
+                            <span class="card-icon">🧗</span>
+                            <h3>Paso del Ángel</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aventura Park -->
+                <div class="destination-card" onclick="openModal('aventura-park')">
+                    <div class="card-image" style="background-image: url('images/aventura_park\ \(2\).png');">
+                        <div class="card-overlay">
+                            <span class="card-icon">🎢</span>
+                            <h3>Aventura Park</h3>
                         </div>
                     </div>
                 </div>
@@ -139,6 +169,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Otros Destinos Section -->
         <section class="featured-section">
@@ -434,6 +465,153 @@
             </div>
         </div>
     </div>
+        <!-- NUEVOS MODALS VILLA DE LEYVA -->
+    
+    <!-- Modal El Fósil -->
+    <div id="modal-fosil" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('fosil')">&times;</span>
+            <div class="modal-header" style="background: linear-gradient(135deg, #8E44AD 0%, #3498DB 100%);">
+                <span class="modal-icon">🦖</span>
+                <h2>Museo El Fósil</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Hogar del Kronosaurus Boyacensis, uno de los fósiles mejor conservados de Latinoamérica con más de 110 millones de años.</p>
+                
+                <div class="modal-section">
+                    <h3>📍 Ubicación</h3>
+                    <p>A solo 5 km de Villa de Leyva, en la ruta hacia Santa Sofía. Vereda Monquirá.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🦖 ¿Qué verás?</h3>
+                    <ul>
+                        <li>Kronosaurus Boyacensis: reptil marino de 17 metros de largo</li>
+                        <li>Más de 400 piezas fósiles de la región</li>
+                        <li>Monquirasaurus Boyacensis (antes Platypterygius)</li>
+                        <li>Museo construido sobre el lugar exacto del hallazgo en 1977</li>
+                        <li>Fósiles del período Cretácico (110-130 millones de años)</li>
+                        <li>Explicación científica del mar prehistórico de Boyacá</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>⏰ Información práctica</h3>
+                    <p><strong>Horario:</strong> Lunes a domingo, 9:00 AM - 5:00 PM</p>
+                    <p><strong>Entrada:</strong> Aproximadamente $10.000 - $15.000 por persona</p>
+                    <p>Un viaje fascinante al pasado prehistórico de Colombia</p>
+                </div>
+
+                <div class="modal-cta">
+                    <p><strong>¡Descubre criaturas de hace 110 millones de años!</strong></p>
+                    <a href="https://wa.me/573144480827?text=Hola,%20quiero%20reservar%20transporte%20al%20Museo%20El%20Fósil" target="_blank" class="modal-btn">Reservar visita</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Paso del Ángel -->
+    <div id="modal-paso-angel" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('paso-angel')">&times;</span>
+            <div class="modal-header" style="background: linear-gradient(135deg, #E74C3C 0%, #F39C12 100%);">
+                <span class="modal-icon">🧗</span>
+                <h2>Paso del Ángel</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Parque de aventura extrema con el famoso "filo" de 35 cm entre dos abismos. ¡Para los más valientes!</p>
+                
+                <div class="modal-section">
+                    <h3>📍 Ubicación</h3>
+                    <p>Municipio de Santa Sofía, vereda Salitrillo, a 20-23 km de Villa de Leyva. Piedra movida.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>⛰️ El desafío principal</h3>
+                    <p><strong>El Paso del Ángel:</strong> Un filo de apenas 35 centímetros en la cresta de la montaña, rodeado por dos profundos abismos formados por la Quebrada Guatoque y el Río Moniquirá. Una experiencia única de adrenalina extrema.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Actividades (11 desafíos)</h3>
+                    <ul>
+                        <li>El famoso Paso del Ángel (filo de la montaña)</li>
+                        <li>Puentes colgantes</li>
+                        <li>Tirolesa sobre los abismos</li>
+                        <li>Rapel y escalada</li>
+                        <li>2 kilómetros de senderos de montaña</li>
+                        <li>Miradores panorámicos</li>
+                        <li>Turismo sostenible y eco-amigable</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📞 Contacto directo</h3>
+                    <p><strong>Teléfonos:</strong> 310 699 2173 / 310 480 5502</p>
+                    <p><strong>RNT:</strong> 65606 (Registro Nacional de Turismo)</p>
+                    <p>Equipo profesional y certificado</p>
+                </div>
+
+                <div class="modal-cta">
+                    <p><strong>¡Atrévete a caminar por el filo de la montaña!</strong></p>
+                    <a href="https://wa.me/573144480827?text=Hola,%20quiero%20reservar%20transporte%20al%20Paso%20del%20Ángel" target="_blank" class="modal-btn">Reservar aventura</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aventura Park -->
+    <div id="modal-aventura-park" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('aventura-park')">&times;</span>
+            <div class="modal-header" style="background: linear-gradient(135deg, #16A085 0%, #27AE60 100%);">
+                <span class="modal-icon">🎢</span>
+                <h2>Aventura Park</h2>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Parque hotel ecológico con actividades extremas y alojamiento único. Perfecto para familias y aventureros.</p>
+                
+                <div class="modal-section">
+                    <h3>📍 Ubicación</h3>
+                    <p>Vereda Saavedra de Roncancios, frente a La Periquera. A 30 minutos de Villa de Leyva.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎢 Actividades extremas</h3>
+                    <ul>
+                        <li>Canopy (tirolesa) sobre el valle</li>
+                        <li>Muro de escalada profesional</li>
+                        <li>Salto en puente controlado (bungee)</li>
+                        <li>Circuito de puentes colgantes estilo tibetano</li>
+                        <li>Tour en bicicletas de montaña</li>
+                        <li>Puentes de cuerdas y madera</li>
+                        <li>Guías certificados y equipo de seguridad incluido</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🏨 Alojamiento único</h3>
+                    <ul>
+                        <li><strong>Habitaciones familiares:</strong> Diseño rústico con vistas al paisaje</li>
+                        <li><strong>Pods:</strong> Para parejas con zona BBQ</li>
+                        <li><strong>Glamping de madera:</strong> Para ver amaneceres y noches estrelladas</li>
+                        <li><strong>Hobbits Deluxe:</strong> Alojamiento premium para parejas con jacuzzi</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📞 Contacto directo</h3>
+                    <p><strong>WhatsApp:</strong> +57 320 848 2594 / +57 310 329 4905</p>
+                    <p>No se requiere experiencia previa - Apto para todos</p>
+                </div>
+
+                <div class="modal-cta">
+                    <p><strong>¡Aventura + Naturaleza + Alojamiento único!</strong></p>
+                    <a href="https://wa.me/573144480827?text=Hola,%20quiero%20reservar%20transporte%20a%20Aventura%20Park" target="_blank" class="modal-btn">Reservar experiencia</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Modal Catedral de Sal -->
     <div id="modal-catedral" class="modal">
