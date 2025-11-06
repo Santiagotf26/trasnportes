@@ -68,6 +68,530 @@ body {
     max-width: 900px;
     animation: fadeInUp 1s ease;
 }
+/* ============================================
+   ESTILOS COMPLETOS PARA SECCIÓN DE CHIVA
+============================================ */
+
+/* Banner Principal de Chiva */
+.chiva-destacada {
+    margin-bottom: 4rem;
+}
+
+.chiva-banner {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(255, 107, 107, 0.3);
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor de imagen de fondo */
+.chiva-imagen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.chiva-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.chiva-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 107, 107, 0.85) 0%, 
+        rgba(255, 217, 61, 0.75) 25%, 
+        rgba(107, 207, 127, 0.75) 50%, 
+        rgba(77, 150, 255, 0.85) 100%);
+    z-index: 1;
+    animation: overlayPulse 8s ease-in-out infinite;
+}
+
+@keyframes overlayPulse {
+    0%, 100% { opacity: 0.85; }
+    50% { opacity: 0.7; }
+}
+
+/* Respaldo si no hay imagen */
+.chiva-banner:not(:has(.chiva-imagen)) .chiva-imagen-container {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 25%, #6BCF7F 50%, #4D96FF 75%, #FF6B6B 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.chiva-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.chiva-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #FF6B6B;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: badgeBounce 2s ease-in-out infinite;
+}
+
+@keyframes badgeBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.badge-pulse {
+    animation: pulse 1.5s infinite;
+    font-size: 1.5rem;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.chiva-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    animation: titleFloat 3s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.chiva-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+}
+
+.chiva-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.chiva-feature-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: #333;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.chiva-feature-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-emoji {
+    font-size: 2.5rem;
+    animation: emojiRotate 3s ease-in-out infinite;
+}
+
+@keyframes emojiRotate {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+.chiva-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-chiva {
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-chiva::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-chiva:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-chiva.primary {
+    background: white;
+    color: #FF6B6B;
+}
+
+.btn-chiva.secondary {
+    background: #25D366;
+    color: white;
+}
+
+.btn-chiva:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Header de Tours en Chiva */
+.chiva-header {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
+    color: white;
+    border-left: 5px solid #FF6B6B;
+}
+
+/* Grid de Tours */
+.chiva-tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Tarjetas de Tours */
+.chiva-tour-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 3px solid transparent;
+}
+
+.chiva-tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-color: #FFD93D;
+}
+
+.chiva-tour-card.destacado {
+    border-color: #FFD93D;
+    background: linear-gradient(to bottom, #FFF9E5 0%, white 100%);
+}
+
+.tour-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tour-badge-special {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #FFD93D;
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(255, 217, 61, 0.5);
+    animation: specialBadgePulse 2s ease-in-out infinite;
+}
+
+@keyframes specialBadgePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.tour-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.chiva-tour-card h3 {
+    color: #FF6B6B;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.tour-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tour-details {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tour-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.detail-icon {
+    font-size: 1.2rem;
+}
+
+.tour-includes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.tour-includes li {
+    padding: 0.5rem 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.tour-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.tour-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Caja de Información de la Chiva */
+.chiva-info-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    margin-top: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.chiva-info-box h3 {
+    color: #FF6B6B;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.chiva-info-box > p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.chiva-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.caracteristica {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.caracteristica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.caract-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.caracteristica strong {
+    display: block;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.caracteristica p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+@media (max-width: 768px) {
+    .chiva-banner {
+        min-height: 500px;
+    }
+    
+    .chiva-title {
+        font-size: 2rem;
+    }
+    
+    .chiva-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .chiva-features {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .chiva-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-chiva {
+        width: 100%;
+    }
+    
+    .chiva-content {
+        padding: 2rem 1rem;
+    }
+    
+    .chiva-tours-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chiva-info-box {
+        padding: 2rem;
+    }
+    
+    .chiva-caracteristicas {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chiva-banner {
+        min-height: 450px;
+    }
+    
+    .chiva-title {
+        font-size: 1.6rem;
+    }
+    
+    .chiva-subtitle {
+        font-size: 1rem;
+    }
+    
+    .chiva-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .chiva-feature-item {
+        padding: 1rem;
+    }
+    
+    .feature-emoji {
+        font-size: 2rem;
+    }
+    
+    .btn-chiva {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .chiva-tour-card {
+        padding: 1.5rem;
+    }
+    
+    .tour-badge-special {
+        top: -10px;
+        right: 10px;
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .chiva-info-box {
+        padding: 1.5rem;
+    }
+    
+    .chiva-info-box h3 {
+        font-size: 1.5rem;
+    }
+    
+    .chiva-caracteristicas {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .service-badge {
     display: inline-flex;
